@@ -1,8 +1,9 @@
 from solution import *
 from numpy import random
+import time
 
 # Testing the result of partition in solution.py
-def testingPartition():
+def testPartition():
     # Test #1: No equal sum
     arr = [100, 150, 100, 50, 102, 259]
     result1 = partition(arr)
@@ -32,27 +33,36 @@ def testingPartition():
     arr1 = [100, 100, 593, 501, 591]
     arr2 = [591, 593, 501, 200]
     if len(result3[0]) == 5 and len(result3[1]) == 4:
+        sum1 = 0
         for i in range(len(result3[0])):
+            sum1 += result3[0][i]
             if result3[0][i] != arr1[i]:
                 verifyFlag = False
 
+        sum2 = 0
         for i in range(len(result3[1])):
+            sum2 += result3[1][i]
             if result3[1][i] != arr2[i]:
                 verifyFlag = False
 
-        if verifyFlag == True:
+        if verifyFlag == True and sum1 == sum2:
             print("Test #3: CORRECT")
         else:
             print("Test #3: INCORRECT")
     else:
         print("Test #3: INCORRECT")
 
-# Time how long it takes to partition into two parts given an array
+# Calculate time elapsed for sum = 1885
+# NOTE: Will continue to fix on
 def timePartition():
-    print("Time Partition")
+    arr = [100, 100, 593, 501, 591, 591, 593, 501, 200]
+    start = time.time_ns()
+    result = partition(arr)
+    end = time.time_ns()
+    print(end - start)
     
 
 if __name__ == "__main__":
-    testingPartition()
+    testPartition()
 
     # timePartition()
