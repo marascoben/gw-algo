@@ -52,17 +52,22 @@ def testPartition():
     else:
         print("Test #3: INCORRECT")
 
-# Calculate time elapsed for sum = 1885
+# Calculate time elapsed for sum = 500
 # NOTE: Will continue to fix on
 def timePartition():
-    arr = [100, 100, 593, 501, 591, 591, 593, 501, 200]
+    # arr = [59, 37, 1, 11, 55, 11, 1, 75, 34, 16, 42, 66, 25, 10, 11, 46]  --> n = 16
+    # arr = [134, 37, 1, 11, 55, 11, 1, 34, 16, 66, 25, 10, 11, 88] --> n = 14
+    # arr = [37, 11, 189, 11, 2, 34, 66, 25, 10, 115] --> n = 10
+    # arr = [150, 100, 184, 66] --> n = 4
+    arr = [250, 250]
     start = time.time_ns()
     result = partition(arr)
     end = time.time_ns()
     print(end - start)
+    print(result)
     
 
 if __name__ == "__main__":
-    testPartition()
+    # testPartition()
 
-    # timePartition()
+    timePartition()
