@@ -53,7 +53,6 @@ def testPartition():
         print("Test #3: INCORRECT")
 
 # Calculate time elapsed for sum = 500
-# NOTE: Will continue to fix on
 def timePartition():
     # arr = [59, 37, 1, 11, 55, 11, 1, 75, 34, 16, 42, 66, 25, 10, 11, 46]  --> n = 16
     # arr = [134, 37, 1, 11, 55, 11, 1, 34, 16, 66, 25, 10, 11, 88] --> n = 14
